@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Moviote</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.png' %}" />
+        <!-- Fontawesome-->
+        <script src="https://kit.fontawesome.com/852539a4c9.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/hover.css' %}" rel="stylesheet" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand fw-bold" href="{% url 'main' %}">
+                    Güsto Etkinlik Kayıt Sistemi
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Mashead header-->
+        <section id="features">
+            <div class="container">
+                <h2 class="text-center mt-5">Lütfen bir etkinlik seçin.</h2>
+                <div class="row align-items-center">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="col-lg-12 order-lg-1 mb-5 mb-lg-0">
+                        <div class="container-fluid px-5">
+                            <div class="row">
+                                <div class="col-md-4 mb-5">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <img class="mb-2" src="{% static 'assets/svgs/etkinlik-1.svg' %}" style="width:100%;height:300px">
+                                        <h3 class="font-alt">Tanışma Partisi</h3>
+                                        <p class="text-muted mb-0">Sosyalleşip sinema hakkında konuşup sohbet edebileceğin tanışma partisi!</p>
+                                        <p>9 Ekim 2022 - Pazar</p>
+                                        <h5 class="font-alt">{{count1|length}}/100</h5>
+                                        <a href="id-1" style="border: solid 0px black" class="btn text-white bg-gradient-primary-to-secondary hvr-grow">Seç</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-5">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <img  class="mb-2" src="{% static 'assets/svgs/etkinlik-2.svg' %}" style="width:100%;height:300px">
+                                        <h3 class="font-alt">Film Gösterimleri</h3>
+                                        <p class="text-muted mb-0">Okulumuzun kütüphanesinde bulunan sinema salonunda film izlemeye davetlisin.</p>
+                                        <p>Her pazartesi ve cuma - 14.00</p>
+                                        <h5 class="font-alt">{{count2|length}}/100</h5>
+                                        <a href="id-2" style="border: solid 0px black" class="btn text-white bg-gradient-primary-to-secondary hvr-grow">Seç</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-5">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <img  class="mb-2" src="{% static 'assets/svgs/etkinlik-2.svg' %}" style="width:100%;height:300px">
+                                        <h3 class="font-alt">Online İzleme Etkinlikleri</h3>
+                                        <p class="text-muted mb-0">Bu etkinlikler discord sunucumuzda.</p>
+                                        <p class="text-muted mb-0">(Bu etkinliklerin kontejyan sınırı yoktur)</p>
+                                        <p>Her pazartesi ve cuma - 14.00</p>
+                                        <h5 class="font-alt">Kontejyan sınırı yoktur</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-black text-center py-5">
+            <div class="container px-5">
+                <div class="text-white-50 small">
+                    <div class="mb-2">&copy; GÜSTO 2022. Tüm Hakları Saklıdır.</div>
+                    <div>
+                    </div>
+                    <a href="https://saltukozelgul.github.io/">Saltware Design</a>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
